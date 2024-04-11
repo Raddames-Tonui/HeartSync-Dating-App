@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "22dc",
+      "username": "jesse",
+      "email": "jessee@gmail.com",
+      "password": "111",
+      "message": "Love is not about finding the perfect person, but about seeing an imperfect person perfectly.",
+      "imageURL": "https://images.pexels.com/photos/794062/pexels-photo-794062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "2a07",
+      "username": "its_radde_",
+      "email": "lord@gmail.com",
+      "password": "111",
+      "message": "Love isn't about being perfect together; it's about learning and growing together through imperfections.",
+      "imageURL": "https://images.pexels.com/photos/1757281/pexels-photo-1757281.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "5735",
+      "username": "Raddames",
+      "email": "raddamestonui48@gmail.com",
+      "password": "111",
+      "message": "To be known and loved is to feel alive. ",
+      "imageURL": "https://images.unsplash.com/photo-1579880651719-3cef00eae7de?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+  ]
+}

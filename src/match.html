@@ -17,16 +17,20 @@
                 <img src="../assets/HS Logo.png" class="h-8" alt="HeartSync Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">HeartSync</span>
             </a>
+            
             <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                
+                    
+
+                <!-- <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                 <span class="sr-only">Open user menu</span>
                 <img id="avatar" class="w-8 h-8 rounded-full" src="" alt="user photo">
-                </button>
+                </button> -->
                 <!-- Dropdown menu -->
                 <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
                 <div class="px-4 py-3">
                     <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
-                    <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+                    <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">name@gmail.com</span>
                 </div>
                 <ul class="py-2" aria-labelledby="user-menu-button">
                     <li>
@@ -64,6 +68,29 @@
                 <li>
                 <a href="./signUp.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Sign Up</a>
                 </li>
+                <li >
+                            <input type="text" id="searchInput" placeholder="Search by username or email" class="flex-grow px-4 py-2 mr-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                            <button onclick="searchUsers()" class="flex-shrink-0 px-4 py-2 bg-blue-500 text-white rounded-lg focus:outline-none focus:bg-blue-600">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                width="24"
+                                height="24"
+                                class="w-6 h-6"
+                            >
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                            </button>
+                        </div>
+                        <div id="searchResults"></div>
+                        </div>
+                </li>
             </ul>
             </div>
             </div>
@@ -77,6 +104,7 @@
         <div class="md:fixed hidden md:block w-1/5 left-0 top-16 overflow-y-hidden  bg-gray-200  overflow-hidden  h-full">
             <div class="container md:grid md:grid-rows-5 h-full  justify-center ">
                 <div></div>
+                
                 <div id="searchButton">
                     <svg  class="dark:white h-[3em]" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 16 16"><g ><path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018c-5.825-3.764-1.664-6.69 0-5.018"/><path d="M13 6.5a6.47 6.47 0 0 1-1.258 3.844q.06.044.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5M6.5 12a5.5 5.5 0 1 0 0-11a5.5 5.5 0 0 0 0 11"/></g></svg> Search </div>
                 <div id="del">
