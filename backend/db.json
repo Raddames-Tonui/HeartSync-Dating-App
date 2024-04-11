@@ -1,14 +1,6 @@
 {
   "users": [
-    {
-      "id": "60bf",
-      "fname": "jane",
-      "email": "jae@gmail.com",
-      "password": "111",
-      "message": "I'm Jane",
-      "imageURL": "https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "likes": 0
-    },
+    
     {
       "id": "348f",
       "fname": "june",
