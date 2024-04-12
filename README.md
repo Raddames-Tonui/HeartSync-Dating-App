@@ -2,25 +2,32 @@
 #### The app is a simple dating app project 9/04/2024
 #### **By Raddames Tonui**
 ## Project Description
-    Its a simple dating website
+    This is a simple website that:
+    "A user can:
+        - Create an account/add his/her details.
+        - Can search for someones profile
+        - delete their account.
+        - like someones profile
+        - unmatch each other
 ## Setup/Installation Requirements
     - Download zip in the code section of github to your desired folder
     - Extract the files
     - Open the folder with vs code.
     - Then run "json-server --watch database.json" to run our server.
     - The run your index.html by either using the "GO LIVE" extension or by double clicking of the index.html
-    - And your application is running.
+    - 
        
 ## Live link
-Deployed Frontend can be accessed here [Blog](/)  
-Deployed Backend can be accessed here [Blog](/)  
+Deployed Frontend can be accessed here [Blog](/https://raddames-tonui.github.io/HeartSync-Dating-App/)  
+Deployed Backend can be accessed here [Blog](/https://heartsync-dating-app.onrender.com)  
 
 
 ## Known Bugs
    
 ## Technologies used
-    - JS
+   
     - HTML and CSS
+    - JS
     - Fontawesome
     - Tailwindcss
     - Json
