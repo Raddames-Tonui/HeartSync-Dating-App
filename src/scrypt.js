@@ -21,7 +21,7 @@
 
     // fetch users from db.json
 function getAllUsers() {
-    fetch('http://localhost:3000/users')
+    fetch('https://heartsync-dating-app.onrender.com/users')
         .then(res => res.json())
         .then(users => users.forEach(user => renderOneUser(user)))
         .catch(error => console.error('Error fetching users:', error));
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     delButton.addEventListener('click', function() {
         // Perform DELETE request to delete user
-        fetch('http://localhost:3000/users/userId', {
+        fetch('https://heartsync-dating-app.onrender.com/users/userId', {
             method: 'DELETE'
         })
         .then(response => {
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // SEARCH INPUT
 function searchUsers(query) {
-return fetch('http://localhost:3000/users') 
+return fetch('https://heartsync-dating-app.onrender.com/users') 
     .then(response => response.json())
     .then(data => {
     return data.users.filter(user =>

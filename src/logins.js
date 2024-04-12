@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Fetch JSON data from server
-        fetch('http://localhost:3000/users')
+        fetch('https://heartsync-dating-app.onrender.com/users')
             .then(response => response.json())
             .then(usersData => {
                 // Check if username or email already exists
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         imageURL: imageURL
                     };
                     // Update JSON data on server
-                    fetch('http://localhost:3000/users', {
+                    fetch('https://heartsync-dating-app.onrender.com/users', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const password = document.getElementById('password').value;
 
         // Fetch JSON data from server
-        fetch('http://localhost:3000/users')
+        fetch('https://heartsync-dating-app.onrender.com/users')
             .then(response => response.json())
             .then(usersData => {
                 // Check if user exists
