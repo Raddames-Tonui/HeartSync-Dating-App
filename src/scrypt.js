@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-            // SEARCH 
+            // SEARCH INPUT
 function searchUsers(query) {
 return fetch('http://localhost:3000/users') 
     .then(response => response.json())
