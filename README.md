@@ -13,14 +13,14 @@
     - Download zip in the code section of github to your desired folder
     - Extract the files
     - Open the folder with vs code.
-    - Then run node server.js to run our server. 
-    - Run npx tailwindcss -i ./src/input.css -o ./src/output.css --watch to run tailwindcss
+    - Then run `node server.js` to run our server. 
+    - Run `npx tailwindcss -i ./src/input.css -o ./src/output.css --watch` to run tailwindcss
     - The run your index.html by either using the "GO LIVE" extension or by double clicking of the index.html
     - 
        
 ## Live link
-Deployed Frontend can be accessed here [Blog](/https://raddames-tonui.github.io/HeartSync-Dating-App/)  
-Deployed Backend can be accessed here [Blog](/https://heartsync-dating-app.onrender.com)  
+Deployed Frontend can be accessed here [Blog](https://raddames-tonui.github.io/HeartSync-Dating-App/)  
+Deployed Backend can be accessed here [Blog](https://heartsync-dating-app.onrender.com/users)
 
 
 ## Known Bugs

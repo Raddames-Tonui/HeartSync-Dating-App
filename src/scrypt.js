@@ -19,7 +19,7 @@ let card = document.createElement('div');
 card.className = "userCard";
 card.innerHTML += 
                 `
-            <div class="h-full max-w-sm bg-white border border-black-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-3">
+            <div class="h-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <div>
                 <a href="#">
                     <img class="rounded-t-lg" src="${person.imageURL}" alt="" />
