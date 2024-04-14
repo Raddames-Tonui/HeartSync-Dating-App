@@ -13,7 +13,8 @@
     - Download zip in the code section of github to your desired folder
     - Extract the files
     - Open the folder with vs code.
-    - Then run "json-server --watch database.json" to run our server.
+    - Then run node server.js to run our server. 
+    - Run npx tailwindcss -i ./src/input.css -o ./src/output.css --watch to run tailwindcss
     - The run your index.html by either using the "GO LIVE" extension or by double clicking of the index.html
     - 
        

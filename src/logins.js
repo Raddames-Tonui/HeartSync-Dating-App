@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         alert("Sign up successful. You can now sign in.");
 
                         // Redirect to match.html page
-                        window.location.href = './match.html';
+                        window.location.href = './home.html';
                     })
                     .catch(error => console.error('Error adding user:', error));
                 }
@@ -75,8 +75,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Check if user exists
                 const user = usersData.find(user => user.email === email);
                 if (user && user.password === password) {
-                    // Redirect to match.html page
-                    window.location.href = './match.html';
+                    // Redirect to home.html page
+                    window.location.href = './home.html';
                 } else if (user) {
                     alert("Incorrect password. Please check your credentials.");
                 } else {
