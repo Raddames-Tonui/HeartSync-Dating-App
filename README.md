@@ -20,7 +20,7 @@
        
 ## Live link
 Deployed Frontend can be accessed here [Front End](https://raddames-tonui.github.io/HeartSync-Dating-App/)  
-Deployed Backend can be accessed here [Front End](https://heartsync-dating-app.onrender.com/users)
+Deployed Backend can be accessed here [backend End](https://heartsync-dating-app.onrender.com/users)
 
 
 ## Known Bugs
