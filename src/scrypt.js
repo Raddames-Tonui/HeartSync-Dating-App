@@ -1,5 +1,4 @@
                         // FETCH USERS (READ)
-  
 function getAllUsers(query = ''){
     fetch(`https://heartsync-dating-app.onrender.com/users`)
     .then((data)=> data.json())
@@ -11,19 +10,16 @@ function initialize() {
     getAllUsers(); 
 }
 initialize(); // Call initialize to start the process
-
-  
   
 function renderOneUser(person) {
 let card = document.createElement('div');
 card.className = "userCard";
 card.innerHTML += 
                 `
-                
-                    <div class="h-[80vh] max-w-sm mb-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col">
-                        <div class="overflow-hidden h-[80%]">
+                    <div class="h-[80vh] max-w-sm mt-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col">
+                        <div class="overflow-hidden  h-[80%]">
                             <a href="#">
-                                <img class="rounded-t-lg h-full object-cover w-full" src="${person.imageURL}" alt="${person.username}" />
+                                <img class="rounded-t-lg h-full object-cover w-screen" src="${person.imageURL}" alt="${person.username}" />
                             </a>
                         </div>
                         <div class="flex flex-row items-start gap-2 pt-3 pl-2">
@@ -35,10 +31,10 @@ card.innerHTML +=
                             <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" viewBox="0 0 24 24">
                                 <path fill="currentColor" d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.898 5.516 5 6.934V22l5.34-4.005C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8m0 14h-.333L9 18v-2.417l-.641-.247C5.67 14.301 4 12.256 4 10c0-3.309 3.589-6 8-6s8 2.691 8 6s-3.589 6-8 6"/>
                             </svg>
-                
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" viewBox="0 0 24 24">
-                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m22 2l-7 20l-4-9l-9-4Zm0 0L11 13"/>
-                            </svg>
+                            <div id="delete"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em"  viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036c-.01-.003-.019 0-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M14.28 2a2 2 0 0 1 1.897 1.368L16.72 5H20a1 1 0 1 1 0 2h-1v12a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V7H4a1 1 0 0 1 0-2h3.28l.543-1.632A2 2 0 0 1 9.721 2zM17 7H7v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1zm-2.72-3H9.72l-.333 1h5.226z"/></g></svg>
+                            </div>
+                            
                         </div>
                         <div class="p-2">
                             <a href="#">
@@ -49,9 +45,7 @@ card.innerHTML +=
                             </p>
                         </div>
                     </div>
-             
-            
-            `
+                `
                     //  FOR ALTERNATIVE CARD
             // `<div  class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row mx-auto md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 ">
             //     <img class="object-cover w-full rounded-t-lg h-100 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="${person.imageURL}" alt="${person.fname}">
@@ -66,36 +60,51 @@ card.innerHTML +=
             //     </div>
             // </div>`
 
-            card.querySelector("#like").addEventListener("click", ()=>{
-                card.querySelector("#like").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="1.5em" viewBox="0 0 128 128"><path fill="#f44336" d="M93.99 8.97c-21.91 0-29.96 22.39-29.96 22.39s-7.94-22.39-30-22.39c-16.58 0-35.48 13.14-28.5 43.01c6.98 29.87 58.56 67.08 58.56 67.08s51.39-37.21 58.38-67.08c6.98-29.87-10.56-43.01-28.48-43.01"/><path fill="#c33" d="M30.65 11.2c17.2 0 25.74 18.49 28.5 25.98c.39 1.07 1.88 1.1 2.33.06L64 31.35C60.45 20.01 50.69 8.97 34.03 8.97c-6.9 0-14.19 2.28-19.86 7.09c5.01-3.29 10.88-4.86 16.48-4.86m63.34-2.23c-5.29 0-10.11 1.15-13.87 3.47c2.64-1.02 5.91-1.24 9.15-1.24c16.21 0 30.72 12.29 24.17 40.7c-5.62 24.39-38.46 53.98-48.49 65.27c-.64.72-.86 1.88-.86 1.88s51.39-37.21 58.38-67.08c6.98-29.86-10.53-43-28.48-43"/><path fill="#ff8a80" d="M17.04 24.82c3.75-4.68 10.45-8.55 16.13-4.09c3.07 2.41 1.73 7.35-1.02 9.43c-4 3.04-7.48 4.87-9.92 9.63c-1.46 2.86-2.34 5.99-2.79 9.18c-.18 1.26-1.83 1.57-2.45.46c-4.22-7.48-5.42-17.78.05-24.61m60.12 9.84c-1.76 0-3-1.7-2.36-3.34c1.19-3.02 2.73-5.94 4.58-8.54c2.74-3.84 7.95-6.08 11.25-3.75c3.38 2.38 2.94 7.14.57 9.44c-5.09 4.93-11.51 6.19-14.04 6.19"/></svg>`
+        // LIKE BUTTON
+        card.querySelector("#like").addEventListener("click", ()=>{
+            card.querySelector("#like").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="1.5em" viewBox="0 0 128 128"><path fill="#f44336" d="M93.99 8.97c-21.91 0-29.96 22.39-29.96 22.39s-7.94-22.39-30-22.39c-16.58 0-35.48 13.14-28.5 43.01c6.98 29.87 58.56 67.08 58.56 67.08s51.39-37.21 58.38-67.08c6.98-29.87-10.56-43.01-28.48-43.01"/><path fill="#c33" d="M30.65 11.2c17.2 0 25.74 18.49 28.5 25.98c.39 1.07 1.88 1.1 2.33.06L64 31.35C60.45 20.01 50.69 8.97 34.03 8.97c-6.9 0-14.19 2.28-19.86 7.09c5.01-3.29 10.88-4.86 16.48-4.86m63.34-2.23c-5.29 0-10.11 1.15-13.87 3.47c2.64-1.02 5.91-1.24 9.15-1.24c16.21 0 30.72 12.29 24.17 40.7c-5.62 24.39-38.46 53.98-48.49 65.27c-.64.72-.86 1.88-.86 1.88s51.39-37.21 58.38-67.08c6.98-29.86-10.53-43-28.48-43"/><path fill="#ff8a80" d="M17.04 24.82c3.75-4.68 10.45-8.55 16.13-4.09c3.07 2.41 1.73 7.35-1.02 9.43c-4 3.04-7.48 4.87-9.92 9.63c-1.46 2.86-2.34 5.99-2.79 9.18c-.18 1.26-1.83 1.57-2.45.46c-4.22-7.48-5.42-17.78.05-24.61m60.12 9.84c-1.76 0-3-1.7-2.36-3.34c1.19-3.02 2.73-5.94 4.58-8.54c2.74-3.84 7.95-6.08 11.25-3.75c3.38 2.38 2.94 7.14.57 9.44c-5.09 4.93-11.51 6.19-14.04 6.19"/></svg>`
 
-            })
+        })
+        
+        // UNFOLLOW USER
+        card.querySelector("#delete").addEventListener("click", ()=>{
+            card.remove()
+            removeCard(person.id)
+        })
 
 document.querySelector('#userCards').appendChild(card);
 
 }
 
+  // UNFOLLOW USER
+fetch(`https://heartsync-dating-app.onrender.com/${users.id}`, {
+    method: "DELETE",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(users)
+})
+.then(data => data.json())
+.then(users => console.log(users));
+
+      
 
 
+// document.addEventListener('DOMContentLoaded', function() {
+//     const delButton = document.getElementById('del');
 
-        // DELETE USER PROFILE
-document.addEventListener('DOMContentLoaded', function() {
-    const delButton = document.getElementById('del');
-
-    delButton.addEventListener('click', function() {
-        // Perform DELETE request to delete user
-        fetch('https://heartsync-dating-app.onrender.com/users/userId', {
-            method: 'DELETE'
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to delete user'); // statementthat creates a new Error object and throws it as an exception. 
-            }
-            // Redirect to sign-up page after successful deletion
-            window.location.href = './signup.html';
-        })
-    });
-});
+//     delButton.addEventListener('click', function() {
+//         // Perform DELETE request to delete user
+//         fetch('https://heartsync-dating-app.onrender.com/users/userId', {
+//             method: 'DELETE'
+//         })
+//         .then(response => {
+//             if (!response.ok) {
+//                 throw new Error('Failed to delete user'); // statementthat creates a new Error object and throws it as an exception. 
+//             }
+//             // Redirect to sign-up page after successful deletion
+//             window.location.href = './signup.html';
+//         })
+//     });
+// });
 
 
             // SEARCH A USER 
@@ -126,3 +135,6 @@ const init = () => {
 
 }
 document.addEventListener("DOMContentLoaded",init);
+
+//  AVATAR
+fetch("")
