@@ -34,8 +34,8 @@ Deployed Backend can be accessed here [backend End](https://heartsync-dating-app
     - Json
 
 ## Support and contact details
-    - email :: raddamestonui48@gmail.com
-    - phone :: +254717771461
+
+
 
 ### License
 *Licenced under the MIT Licence
